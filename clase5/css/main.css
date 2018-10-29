@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    height: 100vh;
+    grid-gap: 10px;
+    font-family: sans-serif;
+    /* fr agarra el espacio disponible */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+
+main > * {
+    background-color: goldenrod;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Punto de ructura de 500 pixeles*/
+@media (max-width: 500px){
+    main {
+        /* 2 filas y 5 columnas */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, 1fr);
+    }
+}
+/* Punto de ructura de 300 pixeles */
+@media (max-width: 300px){
+    main {
+        /* 1 filas y 5 columnas */
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(9, 1fr);
+    }
+}
